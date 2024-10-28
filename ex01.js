@@ -1,6 +1,6 @@
 function Produto (nome, valor){
     this.nome = nome;
-    this.valor = `R$${valor},00`
+    this.valor = `R$ ${valor},00`
 }
 
 function Bolos (nome, valor, sabor, tamanho, camadas, recheio){

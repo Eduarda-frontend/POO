@@ -1,132 +1,48 @@
-# 🎂 Sistema de Pedidos de Bolos em JavaScript
+```markdown
+# Projeto Bolos
 
-Este projeto demonstra a **implementação de herança em JavaScript** usando funções construtoras para simular um sistema de pedidos de bolos. A estrutura do código envolve três funções principais: `Produto`, `Bolos` e `Pedido`, cada uma representando diferentes abstrações do sistema.
+Este projeto consiste em uma implementação simples de uma estrutura de classes para representar diferentes tipos de bolos e suas características. Utilizamos funções construtoras em JavaScript para criar uma hierarquia de bolos, permitindo a criação de diferentes variantes, como bolos decorados e bento cakes.
 
-## 🛠️ Estrutura do Código
+## Estrutura do Projeto
 
-### 1. **Produto**
-A função `Produto` é a **classe base**, responsável por definir os atributos comuns como:
-- **nome**: O nome do produto.
-- **valor**: O preço do produto.
+### Funções Construtoras
 
-### 2. **Bolos**
-A função `Bolos` herda de `Produto` e adiciona atributos específicos para bolos, como:
-- **sabor**: Sabor do bolo.
-- **tamanho**: Tamanho do bolo em centímetros.
-- **camadas**: Número de camadas do bolo.
-- **recheio**: Tipo de recheio utilizado.
+- **Bolos**: A função base que define os atributos comuns a todos os bolos, como sabor e recheio.
+ 
+- **bentoCake**: Herda os atributos de `Bolos` e adiciona características específicas, como se é um presente e a quantidade de docinhos.
 
-### 3. **Pedido**
-A função `Pedido` herda de `Bolos` e adiciona informações do cliente e contato:
-- **nomeCliente**: Nome do cliente que fez o pedido.
-- **telefone**: Telefone de contato do cliente.
+- **boloDecorado**: Também herda de `Bolos`, mas inclui atributos como o número de camadas e a decoração do bolo.
 
----
-
-## 📦 Exemplo de Uso
+### Exemplo de Uso
 
 ```javascript
-const bentoCake = new Pedido('Alvin', 64999999999, 'Beto Cake', 40, 'chocolate', 10, 2, 'nutella');
-const boloM = new Pedido('Amanda', 62992655557, 'Bolo Médio', 187, 'morango', 20, 3, 'ninho');
-const boloG = new Pedido('Fernanda', 61997969893, 'Bolo Grande', 225, 'baunilha', 20, 3, 'chocolate');
+const cliente1 = new bentoCake('Chocolate', 'nutella', false, 6);
+const cliente2 = new boloDecorado('Baunilha', 'ninho com morango', 2, 'Frozen');
+const cliente3 = new bentoCake('Baunilha', 'chocolate', true, 3);
 
-console.log(bentoCake);
-console.log(boloM);
-console.log(boloG);
+console.log(cliente1);
+console.log(cliente2);
+console.log(cliente3);
 ```
 
-### **Saída no Console:**
-```javascript
-Pedido {
-  nome: 'Beto Cake',
-  valor: 'R$ 40,00',
-  sabor: 'chocolate',
-  tamanho: '10 cm',
-  camadas: 2,
-  recheio: 'nutella',
-  nomeCliente: 'Alvin',
-  telefone: 64999999999
-}
-Pedido {
-  nome: 'Bolo Médio',
-  valor: 'R$ 187,00',
-  sabor: 'morango',
-  tamanho: '20 cm',
-  camadas: 3,
-  recheio: 'ninho',
-  nomeCliente: 'Amanda',
-  telefone: 62992655557
-}
-Pedido {
-  nome: 'Bolo Grande',
-  valor: 'R$ 225,00',
-  sabor: 'baunilha',
-  tamanho: '20 cm',
-  camadas: 3,
-  recheio: 'chocolate',
-  nomeCliente: 'Fernanda',
-  telefone: 61997969893
-}
-```
+### Resultados
 
----
+Ao criar instâncias das funções construtoras, você pode visualizar os diferentes tipos de bolos e suas características no console.
 
-## 🚀 Como Executar o Projeto
+## Instalação
 
-1. **Clone o repositório**:
+Para executar o projeto localmente, siga estas etapas:
+
+1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/seu-usuario/projeto-bolos.git
    ```
-2. **Navegue até o diretório do projeto**:
+2. Navegue até o diretório do projeto:
    ```bash
-   cd nome-do-repositorio
+   cd projeto-bolos
    ```
-3. **Abra o arquivo principal em seu editor** e execute o código no console do navegador ou usando **Node.js**:
-   ```bash
-   node nome-do-arquivo.js
-   ```
+3. Abra o arquivo JavaScript no seu editor de preferência e execute no seu ambiente JavaScript.
 
----
+## Contribuições
 
-## 🌱 Conceitos Aplicados
-
-- **Herança com funções construtoras**: `Bolos` e `Pedido` utilizam `Produto` como classe base.
-- **Composição de objetos**: As instâncias de `Pedido` contêm dados tanto do cliente quanto do bolo.
-- **Organização de código**: Cada função é responsável por atributos específicos da aplicação.
-
----
-
-## 📂 Estrutura do Repositório
-
-```
-📦 nome-do-repositorio
- ┣ 📜 README.md
- ┣ 📜 index.js (ou nome-do-arquivo.js)
-```
-
----
-
-## 📋 Como Contribuir
-
-1. **Fork o repositório**.
-2. Crie uma **branch** com sua feature:
-   ```bash
-   git checkout -b minha-feature
-   ```
-3. **Commit suas alterações**:
-   ```bash
-   git commit -m 'Adiciona minha feature'
-   ```
-4. **Faça o push para a branch**:
-   ```bash
-   git push origin minha-feature
-   ```
-5. Abra um **Pull Request**.
-
----
-
-## 📝 Licença
-
-Este projeto é livre para uso. Sinta-se à vontade para modificar e utilizar conforme necessário.
-
----
+Contribuições são bem-vindas! Se você tiver ideias para novas funcionalidades ou melhorias, sinta-se à vontade para abrir um pull request ou issue.

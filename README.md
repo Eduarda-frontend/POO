@@ -1,4 +1,3 @@
-```markdown
 # Projeto Bolos
 
 Este projeto consiste em uma implementação simples de uma estrutura de classes para representar diferentes tipos de bolos e suas características. Utilizamos funções construtoras em JavaScript para criar uma hierarquia de bolos, permitindo a criação de diferentes variantes, como bolos decorados e bento cakes.

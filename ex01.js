@@ -5,7 +5,7 @@ function Bolos (sabor, recheio){
 
 }
 
-function bentoCake(sabor, recheio, presente, docinhos){
+function BentoCake(sabor, recheio, presente, docinhos){
 
     Bolos.call(this, sabor, recheio);
     this.presente = presente
@@ -13,7 +13,7 @@ function bentoCake(sabor, recheio, presente, docinhos){
 
 }
 
-function boloDecorado(sabor, recheio, camadas, decoracao){
+function BoloDecorado(sabor, recheio, camadas, decoracao){
 
     Bolos.call(this, sabor, recheio);
     this.camadas = camadas;
@@ -21,9 +21,9 @@ function boloDecorado(sabor, recheio, camadas, decoracao){
 
 }
 
-const cliente1 = new bentoCake ('Chocolate', 'nutella', false, 6);
-const cliente2 = new boloDecorado ('Baunilha', 'ninho com morango', 2, 'Frozen');
-const cliente3 = new bentoCake ('Baunilha', 'chocolate', true, 3);
+const cliente1 = new BentoCake ('Chocolate', 'nutella', false, 6);
+const cliente2 = new BoloDecorado ('Baunilha', 'ninho com morango', 2, 'Frozen');
+const cliente3 = new BentoCake ('Baunilha', 'chocolate', true, 3);
 
 console.log(cliente1);
 console.log(cliente2);
